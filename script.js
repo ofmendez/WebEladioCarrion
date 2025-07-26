@@ -4,7 +4,7 @@ document.getElementById('btn-tour').addEventListener('click', function (e) {
   const videoPC = document.getElementById('video-pc');
   const videoMobile = document.getElementById('video-mobile');
 
-  const newVideoURL = 'https://antesdeltour.com/Videos/Eladioconcerts.mp4';
+  const newVideoURL = 'assets/video/Eladioconcerts.mp4';
   const newPosterPC = 'assets/img/PosterTourDesktop.webp';
   const newPosterMobile = 'assets/img/PosterTourMobile.webp';
 
