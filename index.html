@@ -27,7 +27,7 @@
 
   <!-- ========== FAVICON Y ESTILOS ========== -->
   <link rel="icon" type="image/png" href="../Images/icono-donkbrn.png"> <!-- Mejor usar PNG por compatibilidad -->
-   <link rel="stylesheet" href="style.css" />
+   <link rel="stylesheet" href="style01.css" />
 
   <!-- ========== PERFORMANCE Y TRANSICIONES ========== -->
   <meta name="view-transition" content="same-origin"> <!-- Transiciones visuales (Chrome 111+) -->
@@ -89,6 +89,14 @@
       <source src="assets/video/EladioCarrionMobile.mp4" type="video/mp4">
     </video>
   </div>
+
+
+  <script>
+    const preloadVideo = document.createElement('video');
+preloadVideo.src = 'assets/video/Concerts.mp4';
+preloadVideo.preload = 'auto';
+preloadVideo.load();
+  </script>
 
   <!-- Menú TARJETA (fuera del contenedor de video) -->
   <div class="menu-card">
@@ -335,7 +343,7 @@
 
 
 
-  <script src="script.js"></script>
+  <script src="script01.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,404 @@
+/* Elimina márgenes por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body{
+  background-color: black;
+}
+
+@font-face {
+  font-family: 'Adelle Sans';
+  src: url('assets/fonts/AdelleSans-Regular.woff2') format('woff2'),
+       url('assets/fonts/AdelleSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AmericanTypewriterCondensedLight';
+  src: url('assets/fonts/AmericanTypewriterCondensedLight.woff2') format('woff2'),
+       url('assets/fonts/AmericanTypewriterCondensedLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+/* Contenedor que ocupa toda la pantalla */
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Estilo base para los videos */
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+/* Por defecto ocultamos el de móvil */
+#video-mobile {
+  display: none;
+}
+
+/* Mostrar video móvil solo en pantallas pequeñas */
+@media (max-width: 768px) {
+  #video-pc {
+    display: none;
+  }
+
+  #video-mobile {
+    display: block;
+  }
+}
+
+
+.menu-card {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 22%;
+  max-width: 420px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  background-image: url('assets/img/menu-card.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 10;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  padding: 1vw;
+  gap: 0px;
+}
+
+
+
+/* Columna izquierda */
+.menu-left {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 12px;
+}
+
+/* Columna derecha */
+.menu-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+
+.menu-right img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.menu-left {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 12px;
+}
+
+.menu-logo {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu-links a {
+  font-family: 'Adelle Sans', sans-serif;
+  font-size: 1.1em;
+  color: black;
+  text-decoration: none;
+  border-bottom: 2px solid #7f5c37;
+  padding-bottom: 2px;
+  transition: opacity 0.3s;
+}
+
+.menu-links a.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+
+.menu-card {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 1;
+}
+
+/* Mantén esto solo en el media query para móvil */
+@media (max-width: 768px) {
+  .menu-card {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: 90vw;
+    max-width: 360px;
+  }
+
+  .menu-card.hide {
+    transform: translate(-50%, 120%); /* se va hacia abajo conservando el centrado */
+  }
+}
+
+/* Para escritorio, mantenemos Y solamente */
+@media (min-width: 769px) {
+  .menu-card.hide {
+    transform: translateY(120%);
+  }
+}
+
+
+
+/* Contenedor general del overlay del tour */
+.tour-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh; /* usa dvh para mejor compatibilidad móvil */
+  background: transparent;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2vw 2vw;
+  color: white;
+  font-family: 'Adelle Sans', sans-serif;
+}
+
+/* Oculto inicialmente */
+.tour-overlay.hidden {
+  display: none;
+}
+
+/* Fila 1 */
+.tour-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#btn-home {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tour-logo {
+  height: auto;
+  max-width: 160px;
+}
+
+/* Fila 2 */
+.tour-regions {
+  display: flex;
+  justify-content: center;
+}
+
+.region-buttons {
+  display: flex;
+  gap: 10vw;
+  border: 2px solid white;
+  border-radius: 12px;
+  padding: 16px 32px;
+}
+
+.region-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.5em;
+  font-family: 'AmericanTypewriterCondensedLight', sans-serif;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+/* Fila 3 */
+.tour-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+  opacity: 0.8;
+  flex-wrap: wrap;
+}
+
+
+@media (max-width: 768px) {
+ .region-buttons {
+  gap: 10vw;
+}
+
+.region-btn {
+  font-size: 1.5em;
+}
+
+.tour-overlay {
+  padding: 7vw 6vw;
+
+}
+
+.tour-footer {
+  font-size: 0.5em;
+}
+}
+
+
+
+.region-table-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 2vw;
+  font-family: 'AmericanTypewriterCondensedLight', sans-serif;
+  font-size: 1.3em;
+}
+
+.region-table {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.table-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+  padding-bottom: 4px;
+}
+
+.city {
+  font-weight: bold;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+
+.fade-out {
+  opacity: 1;
+  animation: fadeOut 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+
+.region-table {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  width: 50%;
+  justify-content: center;
+  margin: 0 auto;
+  overflow-y: scroll;
+  max-height: 60svh;
+
+  /* Oculta scroll en Firefox */
+  scrollbar-width: none;
+
+  /* Oculta scroll en WebKit (Chrome, Safari, Edge) */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.region-table::-webkit-scrollbar {
+  display: none;
+}
+
+
+.region-table.active {
+  display: block;
+  opacity: 1;
+}
+
+.table-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-family: 'AmericanTypewriterCondensedLight', sans-serif;
+  font-size: 1.8em;
+}
+
+.table-location {
+  color: #fff;
+  text-decoration: none;
+}
+
+.table-location:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+
+.region-table {
+  width: 85%;
+  max-height: 60svh;
+}
+
+.table-row {
+  font-size: 0.85em;
+}
+
+}
