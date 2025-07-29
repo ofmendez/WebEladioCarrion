@@ -352,18 +352,10 @@ video {
   width: 50%;
   justify-content: center;
   margin: 0 auto;
-  overflow-y: scroll;
+  overflow-y: auto;
   max-height: 60svh;
+  padding-right:15px;
 
-  /* Oculta scroll en Firefox */
-  scrollbar-width: none;
-
-  /* Oculta scroll en WebKit (Chrome, Safari, Edge) */
-  -ms-overflow-style: none; /* IE 10+ */
-}
-
-.region-table::-webkit-scrollbar {
-  display: none;
 }
 
 
@@ -402,3 +394,16 @@ video {
 }
 
 }
+
+ ::-webkit-scrollbar-track {
+     background-color: transparent;
+}
+ ::-webkit-scrollbar {
+     width: 4px;
+     background-color: #F5F5F533;
+}
+ ::-webkit-scrollbar-thumb {
+     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+     background-color: #fff;
+}
+ 
