@@ -1,0 +1,258 @@
+/* ================================
+   RESET BÁSICO
+================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ================================
+   ESTILOS GENERALES
+================================== */
+html, body {
+  height: 100%;
+  /* overflow: hidden; */ /* evita scroll si se desea */
+}
+
+body {
+  font-family: sans-serif;
+  background-image: url('../Assets/Images/DesktopBackground.webp'); /* Fondo para escritorio */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+
+/* ================================
+   FONDO PARA DISPOSITIVOS MÓVILES
+================================== */
+@media (max-width: 768px) {
+  body {
+    background-image: url('../Assets/Images/MobileBackground.webp'); /* Fondo para móviles */
+    background-attachment: fixed;
+  }
+}
+
+
+/* ================================
+   SELLO PARENTAL (ESQUINA INFERIOR DERECHA)
+================================== */
+.parental-badge {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  width: 7%;
+  max-width: 130px;
+  opacity: 0.8;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .parental-badge {
+    width: 20%;
+    max-width: 100px;
+    bottom: 8px;
+    right: 8px;
+  }
+}
+
+
+/* ================================
+   IMAGEN SUPERIOR (RETROVISOR)
+================================== */
+.top-image {
+  width: 30%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  animation: fadeIn 1.2s ease-out both;
+}
+
+.top-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* ================================
+   CONTENEDOR DE BOTONES
+================================== */
+.platforms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px 30px 20px;
+}
+
+.platform-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 7 columnas iguales */
+  gap: 40px 10px;                /* Espaciado vertical y horizontal */
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  animation: fadeIn 1s ease-out both;
+}
+
+.platform-grid a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  width: 100%;
+  max-width: 300px;              /* Tamaño uniforme para todos */
+}
+
+/* Pandora ocupa dos columnas y está centrado */
+.centered-platform {
+  grid-column: auto;
+  justify-self: center;
+}
+
+/* Hover de los botones */
+.platform-grid a:hover {
+  transform: scale(1.05);
+}
+
+/* Estilos de las imágenes dentro de los botones */
+.platform-grid img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 0 15px white);
+}
+
+/* Si se quiere forzar un enlace a ocupar todo el ancho */
+a.full-width {
+  grid-column: span 2;
+  justify-content: center;
+}
+
+
+/* ================================
+   GRID EN CELULAR → 3 COLUMNAS
+================================== */
+@media (max-width: 768px) {
+
+  .top-image {
+  padding-top: 50px !important;
+}
+
+  .platforms {
+ 
+  padding: 30px 20px 30px 20px !important;
+}
+  .platform-grid {
+    grid-template-columns: repeat(3, 1fr) !important; /* 3 columnas */
+    gap: 10px !important;
+    max-width: 500px !important;
+  }
+
+  .platform-grid a {
+  height: 80px !important;
+               /* Tamaño uniforme para todos */
+}
+
+  /* En móvil Pandora ocupa toda la fila 
+  .centered-platform {
+    grid-column: span 3;
+    justify-self: center;
+  }*/
+}
+
+
+/* ================================
+   ANIMACIÓN DE ENTRADA
+================================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ================================
+   RESPONSIVE - PANTALLAS PEQUEÑAS
+================================== */
+@media (max-width: 600px) {
+  .platform-grid {
+    width: 100%;
+    max-width: 500px;
+    gap: 5px;                     /* Menos espacio entre botones */
+  }
+
+  .platform-grid a {
+    max-width: 48vw;             /* Tamaño igualado en 2 columnas */
+  }
+
+  .top-image {
+    width: 80%;                  /* Imagen más pequeña en móvil */
+  }
+}
+
+
+/* ================================
+   EFECTO RETRO CRT SIMPLE
+================================== */
+body {
+  animation: flicker 0.15s infinite;
+  filter: contrast(1.2) brightness(1.1) saturate(1.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Parpadeo */
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.95; }
+}
+
+/* Scanlines (líneas CRT más visibles) */
+.scanlines {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.35) 0px,
+    rgba(0, 0, 0, 0.35) 2px,
+    transparent 4px
+  );
+  z-index: 50;
+}
+
+/* ================================
+   EFECTO FRANJAS NEGRAS CRT
+================================== */
+.scanlines::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: rgba(0, 0, 0, 0.4); /* transparencia */
+  animation: sweepDown 3s infinite;
+}
+
+@keyframes sweepDown {
+  0% { top: -100%; }
+  2% { top: 100%; }
+  100% { top: 100%; }
+}
