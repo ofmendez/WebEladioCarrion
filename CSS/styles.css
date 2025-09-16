@@ -18,7 +18,7 @@ html, body {
 
 body {
   font-family: sans-serif;
-  background-image: url('../Assets/Images/DesktopBackground.webp'); /* Fondo para escritorio */
+  background-image: url('../assets/Images/DesktopBackground.webp'); /* Fondo para escritorio */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -31,7 +31,7 @@ body {
 ================================== */
 @media (max-width: 768px) {
   body {
-    background-image: url('../Assets/Images/MobileBackground.webp'); /* Fondo para móviles */
+    background-image: url('../assets/Images/MobileBackground.webp'); /* Fondo para móviles */
     background-attachment: fixed;
   }
 }
