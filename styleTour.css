@@ -102,6 +102,17 @@
      cursor: pointer;
      letter-spacing: 1px;
 }
+
+.TituloEuropa{
+    background: none;
+     border: none;
+     color: white;
+     font-size: 2.5em;
+     font-family: 'AmericanTypewriterCondensedLight', sans-serif;
+     letter-spacing: 1px;
+     text-align:center;
+}
+
 /* Fila 3 */
  .tour-footer {
      display: flex;
@@ -132,6 +143,7 @@
      font-family: 'AmericanTypewriterCondensedLight', sans-serif;
      font-size: 1.3em;
 }
+
  .region-table {
      display: flex;
      flex-direction: column;
@@ -176,6 +188,16 @@
      max-height: 60svh;
      padding-right:15px;
 }
+
+.TablaEuropa{
+     width: 50%;
+     justify-content: center;
+     margin: 0 auto;
+     overflow-y: auto;
+     max-height: 60svh;
+     padding-right:15px;
+}
+
  .region-table.active {
      display: block;
      opacity: 1;
@@ -202,6 +224,11 @@
      .table-row {
          font-size: 0.85em;
     }
+
+    .TablaEuropa{
+     width: 85%;
+         max-height: 60svh;
+}
 }
  ::-webkit-scrollbar-track {
      background-color: transparent;
