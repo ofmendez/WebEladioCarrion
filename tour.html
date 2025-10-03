@@ -1,217 +1,218 @@
 <!DOCTYPE html>
 <html lang="es">
-   <head>
-      <!-- ========== METADATOS BÁSICOS ========== -->
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Eladio Carrión | Don KBRN Tour</title>
-      <meta name="description" content="Consulta todas las fechas del tour 'Don KBRN' de Eladio Carrión y compra tus tickets oficiales aquí. ¡No te lo pierdas!">
-      <meta name="robots" content="index, follow">
-      <link rel="canonical" href="https://eladiocarrion.com/tour">
-      <!-- ========== SEO SOCIAL: OPEN GRAPH ========== -->
-      <meta property="og:type" content="website">
-      <meta property="og:site_name" content="Eladio Carrión | Don KBRN Tour">
-      <meta property="og:title" content="Eladio Carrión | Don KBRN Tour">
-      <meta property="og:description" content="Consulta todas las fechas del tour 'Don KBRN' de Eladio Carrión y compra tus tickets oficiales aquí. ¡No te lo pierdas!">
-      <meta property="og:url" content="https://eladiocarrion.com/tour">
-      <meta property="og:image" content="https://eladiocarrion.com/Images/cover.jpg">
-      <!-- ========== SEO SOCIAL: TWITTER CARDS ========== -->
-      <meta name="twitter:title" content="Eladio Carrión | Don KBRN Tour">
-      <meta name="twitter:description" content="Consulta todas las fechas del tour 'Don KBRN' de Eladio Carrión y compra tus tickets oficiales aquí. ¡No te lo pierdas!">
-      <meta name="twitter:url" content="https://eladiocarrion.com/tour">
-      <meta name="twitter:image" content="https://eladiocarrion.com/assets/img/eladio.jpg">
-      <meta name="twitter:card" content="summary_large_image">
-      <!-- Sugerido para mejor preview -->
-      <!-- ========== FAVICON Y ESTILOS ========== -->
-      <link rel="icon" type="image/png" href="assets/Images/icono-donkbrn.png">
-      <!-- Mejor usar PNG por compatibilidad -->
-      <link rel="stylesheet" href="styleTour.css" />
-      <!-- ========== PERFORMANCE Y TRANSICIONES ========== -->
-      <meta name="view-transition" content="same-origin">
-      <!-- Transiciones visuales (Chrome 111+) -->
-      <!-- ========== CACHE CONTROL ========== -->
-      <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-      <meta http-equiv="Pragma" content="no-cache">
-      <meta http-equiv="Expires" content="0">
-      <!-- ========== GOOGLE ANALYTICS ========== -->
-      <!-- Google tag (gtag.js) -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-0DMBZDJ6VH"></script>
-      <script>
-         window.dataLayer = window.dataLayer || [];
-         function gtag(){dataLayer.push(arguments);}
-         gtag('js', new Date());
-         
-         gtag('config', 'G-0DMBZDJ6VH');
-      </script>
-      <!-- ========== Meta Pixel Code ========== -->
-      <!-- ========== Structured Data (JSON-LD) para Eladio Carrión ========== -->
-      <script type="application/ld+json">
-         {
-           "@context": "https://schema.org",
-           "@type": "Person",
-           "name": "Eladio Carrión",
-           "url": "https://eladiocarrion.com/tour",
-           "image": "https://eladiocarrion.com/images/eladio.jpg",
-           "description": "Eladio Carrión es un cantante y compositor estadounidense. Se especializa en el trap latino, aunque también ha empleado otros estilos urbanos como el R&B latino, el reguetón y el dancehall.",
-           "sameAs": [
-             "https://www.instagram.com/eladiocarrion/",
-             "https://www.youtube.com/channel/UC0_95MpNlRz9x7JmsXBClZA",
-             "https://music.apple.com/es/artist/eladio-carri%C3%B3n/1024801206",
-             "https://open.spotify.com/intl-es/artist/5XJDexmWFLWOkjOEjOVX3e?si=wIwU112hQFqYNt0C-UTekg"
-           ],
-           "jobTitle": "Cantante y compositor",
-           "genre": ["Trap latino", "Reggaetón", "Hip Hop"],
-           "nationality": "Estados Unidos"
-         }
-      </script>
-   </head>
-   <body>
-      <!-- Contenedor del video -->
-      <div class="video-container">
-         <!-- Video para PC -->
-         <video id="video-pc" autoplay muted loop playsinline poster="assets/img/PosterTourDesktop.webp">
-            <source src="assets/video/Concerts.mp4" type="video/mp4">
-         </video>
-      </div>
-      <div id="tour-overlay" class="tour-overlay hidden">
-         <!-- Fila 1: Logo y botón HOME -->
-         <div class="tour-header">
-            <img src="assets/img/DonKBRN_WorldTour.svg" alt="Logo" class="tour-logo" />
-            <a href="https://eladiocarrion.com"><button id="btn-home">HOME</button></a>
-         </div>
-         <!-- Fila 2: Botones Europe, USA, LATAM -->
-         <div class="tour-regions">
-            <div class="region-buttons">
-               <button class="region-btn">EUROPE</button>
-               
-               <button class="region-btn">LATAM</button>
+    <head>
+        <!-- ========== METADATOS BÁSICOS ========== -->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Eladio Carrión | Don KBRN Tour</title>
+        <meta name="description" content="Consulta todas las fechas del tour 'Don KBRN' de Eladio Carrión y compra tus tickets oficiales aquí. ¡No te lo pierdas!" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://eladiocarrion.com/tour" />
+        <!-- ========== SEO SOCIAL: OPEN GRAPH ========== -->
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Eladio Carrión | Don KBRN Tour" />
+        <meta property="og:title" content="Eladio Carrión | Don KBRN Tour" />
+        <meta property="og:description" content="Consulta todas las fechas del tour 'Don KBRN' de Eladio Carrión y compra tus tickets oficiales aquí. ¡No te lo pierdas!" />
+        <meta property="og:url" content="https://eladiocarrion.com/tour" />
+        <meta property="og:image" content="https://eladiocarrion.com/Images/cover.jpg" />
+        <!-- ========== SEO SOCIAL: TWITTER CARDS ========== -->
+        <meta name="twitter:title" content="Eladio Carrión | Don KBRN Tour" />
+        <meta name="twitter:description" content="Consulta todas las fechas del tour 'Don KBRN' de Eladio Carrión y compra tus tickets oficiales aquí. ¡No te lo pierdas!" />
+        <meta name="twitter:url" content="https://eladiocarrion.com/tour" />
+        <meta name="twitter:image" content="https://eladiocarrion.com/assets/img/eladio.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <!-- Sugerido para mejor preview -->
+        <!-- ========== FAVICON Y ESTILOS ========== -->
+        <link rel="icon" type="image/png" href="assets/Images/icono-donkbrn.png" />
+        <!-- Mejor usar PNG por compatibilidad -->
+        <link rel="stylesheet" href="styleTour.css" />
+        <!-- ========== PERFORMANCE Y TRANSICIONES ========== -->
+        <meta name="view-transition" content="same-origin" />
+        <!-- Transiciones visuales (Chrome 111+) -->
+        <!-- ========== CACHE CONTROL ========== -->
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+        <!-- ========== GOOGLE ANALYTICS ========== -->
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-0DMBZDJ6VH"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "G-0DMBZDJ6VH");
+        </script>
+        <!-- ========== Meta Pixel Code ========== -->
+        <!-- ========== Structured Data (JSON-LD) para Eladio Carrión ========== -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Eladio Carrión",
+                "url": "https://eladiocarrion.com/tour",
+                "image": "https://eladiocarrion.com/images/eladio.jpg",
+                "description": "Eladio Carrión es un cantante y compositor estadounidense. Se especializa en el trap latino, aunque también ha empleado otros estilos urbanos como el R&B latino, el reguetón y el dancehall.",
+                "sameAs": [
+                    "https://www.instagram.com/eladiocarrion/",
+                    "https://www.youtube.com/channel/UC0_95MpNlRz9x7JmsXBClZA",
+                    "https://music.apple.com/es/artist/eladio-carri%C3%B3n/1024801206",
+                    "https://open.spotify.com/intl-es/artist/5XJDexmWFLWOkjOEjOVX3e?si=wIwU112hQFqYNt0C-UTekg"
+                ],
+                "jobTitle": "Cantante y compositor",
+                "genre": ["Trap latino", "Reggaetón", "Hip Hop"],
+                "nationality": "Estados Unidos"
+            }
+        </script>
+    </head>
+    <body>
+        <!-- Contenedor del video -->
+        <div class="video-container">
+            <!-- Video para PC -->
+            <video id="video-pc" autoplay muted loop playsinline poster="assets/img/PosterTourDesktop.webp">
+                <source src="assets/video/Concerts.mp4" type="video/mp4" />
+            </video>
+        </div>
+        <div id="tour-overlay" class="tour-overlay hidden">
+            <!-- Fila 1: Logo y botón HOME -->
+            <div class="tour-header">
+                <img src="assets/img/DonKBRN_WorldTour.svg" alt="Logo" class="tour-logo" />
+                <a href="https://eladiocarrion.com"><button id="btn-home">HOME</button></a>
             </div>
-         </div>
-         <div class="region-table-container">
-            <!-- Europa -->
-           <div class="region-table" id="table-europe">
-               <div class="table-row">
-                  <span class="table-date">15/01</span>
-                  <a class="table-location" href="https://sfxpreventa1.janto.es/es/espectaculo/eladio-carrion-granada-2026/ELADIOGR2026" target="_blank">GRANADA, ES</a>
-               </div>
+            <!-- Fila 2: Botones Europe, USA, LATAM -->
+            <div class="tour-regions">
+                <div class="region-buttons">
+                    <button class="region-btn">EUROPE</button>
 
-               <div class="table-row">
-                  <span class="table-date">16/01</span>
-                  <a class="table-location" href="https://sfxpreventa1.janto.es/es/espectaculo/eladio-carrion-valencia-2026/ELADIOVAL2026" target="_blank">VALENCIA, ES</a>
-               </div>
-
-               <div class="table-row">
-                  <span class="table-date">17/01</span>
-                  <a class="table-location" href="https://sfxpreventa2.janto.es/espectaculo/eladio-carrion-zaragoza-2026/ELADIOZAR2026" target="_blank">ZARAGOZA, ES</a>
-               </div>
-
-               <div class="table-row">
-                  <span class="table-date">18/01</span>
-                  <a class="table-location" href="https://sfxpreventa2.janto.es/espectaculo/eladio-carrion-bilbao-2026/ELADIOBILBAO2026" target="_blank">BILBAO, ES</a>
-               </div>
-            
-               <div class="table-row">
-                  <span class="table-date">23/01</span>
-                  <a class="table-location" href="https://sfxpreventa2.janto.es/espectaculo/eladio-carrion-bilbao-2026/ELADIOBILBAO2026" target="_blank">MÁLAGA, ES</a>
-               </div>
-
-               <div class="table-row">
-                  <span class="table-date">24/01</span>
-                  <a class="table-location" href="https://sfxpreventa.janto.es/espectaculo/eladio-carrion-barcelona-2026/ELADIOBCN2026" target="_blank">BARCELONA, ES</a>
-               </div>
-            
-               <div class="table-row">
-                  <span class="table-date">28/01</span>
-                  <a class="table-location" href="https://sfxpreventa.janto.es/espectaculo/eladio-carrion-madrid-2026/ELADIOMAD2026" target="_blank">MADRID, ES</a>
-               </div>
-
-               <div class="table-row">
-                  <span class="table-date">29/01</span>
-                  <a class="table-location" href="https://sfxpreventa2.janto.es/espectaculo/eladio-carrion-a-coruna-2026/ELADIOCORU2026" target="_blank">A CORUÑA, ES</a>
-               </div>
-
-               <div class="table-row">
-                  <span class="table-date">31/01</span>
-                  <a class="table-location" href="https://sfxpreventa2.janto.es/espectaculo/eladio-carrion-tenerife-2026/ELADIOTENER2026" target="_blank">TENERIFE, ES</a>
-               </div>
-               
+                    <button class="region-btn">LATAM</button>
+                </div>
             </div>
-            
-            <!-- LATAM -->
-            <div class="region-table" id="table-latam">
-               <div class="table-row">
-                  <span class="table-date">10/02</span>
-                  <a class="table-location" href="https://www.ticketasa.gt/events/eladio_carri%C3%B3n/" target="_blank">GUATEMALA CITY, GUATEMALA</a>
-               </div>
-               <div class="table-row">
-                  <span class="table-date">10/03</span>
-                  <a class="table-location" href="https://www.eticket.cr/eventos.aspx?idartista=1224" target="_blank">SAN JOSÉ, COSTA RICA</a>
-               </div>
-               <div class="table-row">
-                  <span class="table-date">10/04</span>
-                  <a class="table-location" href="https://panatickets.boletosenlinea.events/eventperformances.asp?evt=2189" target="_blank">PANAMÁ CITY, PANAMÁ</a>
-               </div>
-               <div class="table-row">
-                  <span class="table-date">10/10</span>
-                  <a class="table-location" href="https://tuboleta.com/es/eventos/eladio-carrion-don-kbrn-world-tour-bogota" target="_blank">BOGOTÁ, COLOMBIA</a>
-               </div>
-               <div class="table-row">
-                  <span class="table-date">10/11</span>
-                  <a class="table-location" href="https://tuboleta.com/es/eventos/eladio-carrion-don-kbrn-world-tour-cali" target="_blank">CALI, COLOMBIA</a>
-               </div>
-               <div class="table-row">
-                  <span class="table-date">10/12</span>
-                  <a class="table-location" href="https://tuboleta.com/es/eventos/eladio-carrion-don-kbrn-world-tour-medellin" target="_blank">MEDELLÍN, ANTIOQUIA</a>
-               </div>
-               <div class="table-row">
-                  <span class="table-date">10/15</span>
-                  <a class="table-location" href="https://sale.ticketshow.com.ec/rps/synopsis.aspx?evento=8808&nombreEvento=Eladio_Carrion_-Quito_2025" target="_blank">QUITO, ECUADOR</a>
-               </div>
-               <div class="table-row">
-                  <span class="table-date">10/16</span>
-                  <a class="table-location" href="https://www.ticketshow.com.ec/evento/Eladio-Carrion---Guayaquil-Guayaquil" target="_blank">GUAYAQUIL, ECUADOR</a>
-               </div>
-               <div class="table-row">
-                  <span class="table-date">10/18</span>
-                  <a class="table-location" href="https://teleticket.com.pe/eladio-carrion" target="_blank">LIMA, PERÚ</a>
-               </div>
-               <div class="table-row">
-                  <span class="table-date">10/25</span>
-                  <a class="table-location" href="https://ticketea.com.py/events/eladio-don-kbrn-world-tour-paraguay-2025" target="_blank">ASUNCIÓN, PARAGUAY</a>
-               </div>
-               <div class="table-row">
-                  <span class="table-date">10/27</span>
-                  <a class="table-location" href="https://www.puntoticket.com/eladio-carrion" target="_blank">SANTIAGO, CHILE</a>
-               </div>
-               <div class="table-row">
-                  <span class="table-date">10/30</span>
-                  <a class="table-location" href="https://www.movistararena.com.ar/show/fc9e607d-645c-4692-a676-9a63d9a68be3" target="_blank">BUENOS AIRES, ARGENTINA</a>
-               </div>
-               <div class="table-row">
-                  <span class="table-date">02/05</span>
-                  <a class="table-location" href="https://www.eticket.mx/masinformacion.aspx?idevento=33852" target="_blank">MÉRIDA, MÉXICO</a>
-               </div>
-               <div class="table-row">
-                  <span class="table-date">02/07</span>
-                  <a class="table-location" href="https://www.superboletos.com/landing-evento/w30Z5CZ7Tavmsxt6-_5hWA" target="_blank">MONTERREY, MÉXICO</a>
-               </div>
-               <div class="table-row">
-                  <span class="table-date">02/11</span>
-                  <a class="table-location" href="https://www.ticketmaster.com.mx/eladio-carrion-zapopan-11-02-2026/event/1400629099B109C1" target="_blank">GUADALAJARA, MÉXICO</a>
-               </div>
-               <div class="table-row">
-                  <span class="table-date">02/14</span>
-                  <a class="table-location" href="https://www.ticketmaster.com.mx/event/14006290B0391521" target="_blank">MÉXICO CITY, MÉXICO</a>
-               </div>
+            <div class="region-table-container">
+                <!-- Europa -->
+                <div class="region-table" id="table-europe">
+                    <div class="table-row">
+                        <span class="table-date">15/01</span>
+                        <a class="table-location" href="https://sfxpreventa1.janto.es/es/espectaculo/eladio-carrion-granada-2026/ELADIOGR2026" target="_blank">GRANADA, ES</a>
+                    </div>
+
+                    <div class="table-row">
+                        <span class="table-date">16/01</span>
+                        <a class="table-location" href="https://sfxpreventa1.janto.es/es/espectaculo/eladio-carrion-valencia-2026/ELADIOVAL2026" target="_blank">VALENCIA, ES</a>
+                    </div>
+
+                    <div class="table-row">
+                        <span class="table-date">17/01</span>
+                        <a class="table-location" href="https://sfxpreventa2.janto.es/espectaculo/eladio-carrion-zaragoza-2026/ELADIOZAR2026" target="_blank">ZARAGOZA, ES</a>
+                    </div>
+
+                    <div class="table-row">
+                        <span class="table-date">18/01</span>
+                        <a class="table-location" href="https://sfxpreventa2.janto.es/espectaculo/eladio-carrion-bilbao-2026/ELADIOBILBAO2026" target="_blank">BILBAO, ES</a>
+                    </div>
+
+                    <div class="table-row">
+                        <span class="table-date">23/01</span>
+                        <a class="table-location" href="https://sfxpreventa2.janto.es/espectaculo/eladio-carrion-bilbao-2026/ELADIOBILBAO2026" target="_blank">MÁLAGA, ES</a>
+                    </div>
+
+                    <div class="table-row">
+                        <span class="table-date">24/01</span>
+                        <a class="table-location" href="https://sfxpreventa.janto.es/espectaculo/eladio-carrion-barcelona-2026/ELADIOBCN2026" target="_blank">BARCELONA, ES</a>
+                    </div>
+
+                    <div class="table-row">
+                        <span class="table-date">28/01</span>
+                        <a class="table-location" href="https://sfxpreventa.janto.es/espectaculo/eladio-carrion-madrid-2026/ELADIOMAD2026" target="_blank">MADRID, ES</a>
+                    </div>
+
+                    <div class="table-row">
+                        <span class="table-date">29/01</span>
+                        <a class="table-location" href="https://sfxpreventa2.janto.es/espectaculo/eladio-carrion-a-coruna-2026/ELADIOCORU2026" target="_blank">A CORUÑA, ES</a>
+                    </div>
+
+                    <div class="table-row">
+                        <span class="table-date">31/01</span>
+                        <a class="table-location" href="https://sfxpreventa2.janto.es/espectaculo/eladio-carrion-tenerife-2026/ELADIOTENER2026" target="_blank">TENERIFE, ES</a>
+                    </div>
+                </div>
+
+                <!-- LATAM -->
+                <div class="region-table" id="table-latam">
+                    <div class="table-row">
+                        <span class="table-date">10/02</span>
+                        <a class="table-location" href="https://www.ticketasa.gt/events/eladio_carri%C3%B3n/" target="_blank">GUATEMALA CITY, GUATEMALA</a>
+                    </div>
+                    <div class="table-row">
+                        <span class="table-date">10/03</span>
+                        <a class="table-location" href="https://www.eticket.cr/eventos.aspx?idartista=1224" target="_blank">SAN JOSÉ, COSTA RICA</a>
+                    </div>
+                    <div class="table-row">
+                        <span class="table-date">10/04</span>
+                        <a class="table-location" href="https://panatickets.boletosenlinea.events/eventperformances.asp?evt=2189" target="_blank">PANAMÁ CITY, PANAMÁ</a>
+                    </div>
+                    <div class="table-row">
+                        <span class="table-date">10/10</span>
+                        <a class="table-location" href="https://tuboleta.com/es/eventos/eladio-carrion-don-kbrn-world-tour-bogota" target="_blank">BOGOTÁ, COLOMBIA</a>
+                    </div>
+                    <div class="table-row">
+                        <span class="table-date">10/11</span>
+                        <a class="table-location" href="https://tuboleta.com/es/eventos/eladio-carrion-don-kbrn-world-tour-cali" target="_blank">CALI, COLOMBIA</a>
+                    </div>
+                    <div class="table-row">
+                        <span class="table-date">10/12</span>
+                        <a class="table-location" href="https://tuboleta.com/es/eventos/eladio-carrion-don-kbrn-world-tour-medellin" target="_blank">MEDELLÍN, ANTIOQUIA</a>
+                    </div>
+                    <div class="table-row">
+                        <span class="table-date">10/15</span>
+                        <a class="table-location" href="https://sale.ticketshow.com.ec/rps/synopsis.aspx?evento=8808&nombreEvento=Eladio_Carrion_-Quito_2025" target="_blank">QUITO, ECUADOR</a>
+                    </div>
+                    <div class="table-row">
+                        <span class="table-date">10/16</span>
+                        <a class="table-location" href="https://www.ticketshow.com.ec/evento/Eladio-Carrion---Guayaquil-Guayaquil" target="_blank">GUAYAQUIL, ECUADOR</a>
+                    </div>
+                    <div class="table-row">
+                        <span class="table-date">10/18</span>
+                        <a class="table-location" href="https://teleticket.com.pe/eladio-carrion" target="_blank">LIMA, PERÚ</a>
+                    </div>
+                    <div class="table-row">
+                        <span class="table-date">10/25</span>
+                        <a class="table-location" href="https://ticketea.com.py/events/eladio-don-kbrn-world-tour-paraguay-2025" target="_blank">ASUNCIÓN, PARAGUAY</a>
+                    </div>
+                    <div class="table-row">
+                        <span class="table-date">10/27</span>
+                        <a class="table-location" href="https://www.puntoticket.com/eladio-carrion" target="_blank">SANTIAGO, CHILE</a>
+                    </div>
+                    <div class="table-row">
+                        <span class="table-date">10/30</span>
+                        <a class="table-location" href="https://www.movistararena.com.ar/show/fc9e607d-645c-4692-a676-9a63d9a68be3" target="_blank">BUENOS AIRES, ARGENTINA</a>
+                    </div>
+                    <div class="table-row">
+                        <span class="table-date">02/05</span>
+                        <a class="table-location" href="https://www.eticket.mx/masinformacion.aspx?idevento=33852" target="_blank">MÉRIDA, MÉXICO</a>
+                    </div>
+                    <div class="table-row">
+                        <span class="table-date">02/07</span>
+                        <a class="table-location" href="https://www.superboletos.com/landing-evento/w30Z5CZ7Tavmsxt6-_5hWA" target="_blank">MONTERREY, MÉXICO</a>
+                    </div>
+                    <div class="table-row">
+                        <span class="table-date">02/11</span>
+                        <a class="table-location" href="https://www.ticketmaster.com.mx/eladio-carrion-zapopan-11-02-2026/event/1400629099B109C1" target="_blank">GUADALAJARA, MÉXICO</a>
+                    </div>
+                    <div class="table-row">
+                        <span class="table-date">02/14</span>
+                        <a class="table-location" href="https://www.ticketmaster.com.mx/event/14006290B0391521" target="_blank">MÉXICO CITY, MÉXICO</a>
+                    </div>
+                </div>
             </div>
-         </div>
-         <!-- Fila 3: Textos -->
-         <div class="tour-footer">
-            <span>有効期限 2026年04月10日まで有効</span>
-            <span>生年月日 | 1994年11月14日生</span>
-         </div>
-      </div>
-      <script src="scriptTour.js"></script>
-   </body>
+            <!-- Fila 3: Textos -->
+            <div class="tour-footer">
+                <span>有効期限 2026年04月10日まで有効</span>
+                <span>生年月日 | 1994年11月14日生</span>
+            </div>
+        </div>
+        <script src="scriptTour.js"></script>
+    </body>
 </html>
