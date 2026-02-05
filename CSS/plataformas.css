@@ -10,23 +10,35 @@ user-select: none;
 
 html, body{
 height: 100svh;
-background-color: black;
+ margin: 0;
+padding: 0;
 }
 
 
 body{
 font-family: 'Caprasimo', serif;
-background: url('../img/bg-desktop-bd.webp') center / cover no-repeat;
 display: flex;
 flex-direction: column;
 }
 
+/* Fondo fijo real */
+.bg-fixed{
+    position: fixed;
+    inset: 0;
+    width: 100vw;
 
-/* Fondo mobile */
-@media (max-width: 768px){
-body{
-background-image: url('../img/bg-mobile-bd.webp');
+    /* 👇 La clave para móviles modernos */
+    height: 100dvh;
+
+    background: url('../img/bg-mobile-bd.webp') center / cover no-repeat;
+    z-index: -1;
 }
+
+/* Cambio automático para desktop */
+@media (min-width: 768px){
+    .bg-fixed{
+        background-image: url('../img/bg-desktop-bd.webp');
+    }
 }
 
 
@@ -180,7 +192,8 @@ width: 22px;
 
 @media (max-width: 768px){
 .title h1{
-font-size: clamp(48px, 8vw, 120px);
+padding-top: 30px;
+font-size: clamp(38px, 8vw, 120px);
 text-shadow:
 0 0 1px rgba(255,255,255,0.6),
 0 0 4px rgba(255,255,255,0.4);
@@ -192,6 +205,12 @@ font-size: clamp(18px, 6vw, 50px);
 text-shadow:
 0 0 1px rgba(255,255,255,0.6),
 0 0 4px rgba(255,255,255,0.4);
+}
+
+.cover img{
+margin: 3vh 0;
+width: 30vh;
+border-radius: 10px;
 }
 }
 
