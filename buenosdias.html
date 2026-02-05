@@ -6,42 +6,38 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 
-
   <!-- ========== METADATOS BÁSICOS ========== -->
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Eladio Carrión | Buenos Días</title>
-  <meta name="description" content="Muy pronto: 'Buenos Días', el nuevo sencillo de Eladio Carrión. El countdown ya comenzó.">
+  <title>Buenos Días – Eladio Carrión | Escúchalo Aquí</title>
+  <meta name="description" content="Escucha Buenos Días, el nuevo sencillo de Eladio Carrión, disponible en todas las plataformas digitales.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://eladiocarrion.com/buenosdias">
 
   <!-- ========== SEO SOCIAL: OPEN GRAPH ========== -->
   <meta property="og:type" content="music.song">
-  <meta property="og:site_name" content="Eladio Carrión | Buenos Días">
-  <meta property="og:title" content="Eladio Carrión | Buenos Días">
-  <meta property="og:description" content="Muy pronto: 'Buenos Días', el nuevo sencillo de Eladio Carrión.">
+  <meta property="og:site_name" content="Eladio Carrión">
+  <meta property="og:title" content="Buenos Días – Eladio Carrión">
+  <meta property="og:description" content="Escucha Buenos Días, el nuevo sencillo de Eladio Carrión, ya disponible en todas las plataformas.">
   <meta property="og:url" content="https://eladiocarrion.com/buenosdias">
   <meta property="og:image" content="https://eladiocarrion.com/img/cover-buenosdias.jpg">
 
   <!-- ========== SEO SOCIAL: TWITTER / X ========== -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Eladio Carrión | Buenos Días">
-  <meta name="twitter:description" content="Muy pronto: 'Buenos Días', el nuevo sencillo de Eladio Carrión.">
+  <meta name="twitter:title" content="Buenos Días – Eladio Carrión">
+  <meta name="twitter:description" content="Escucha el nuevo sencillo de Eladio Carrión, disponible ahora.">
   <meta name="twitter:image" content="https://eladiocarrion.com/img/cover-buenosdias.jpg">
+  <meta name="twitter:site" content="@eladiocarry_on">
 
   <!-- ========== FUENTES ========== -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
   <!-- ========== ESTILOS ========== -->
-  <link rel="stylesheet" href="CSS/countdown.css">
-
-  <!-- ========== PRELOAD FONDOS ========== -->
-  <link rel="preload" as="image" href="img/bg-desktop.webp" media="(min-width:768px)">
-  <link rel="preload" as="image" href="img/bg-mobile.webp" media="(max-width:767px)">
+  <link rel="stylesheet" href="css/plataformas.css">
 
   <!-- ========== FAVICON ========== -->
   <link rel="icon" type="image/png" href="img/favicon-buenos-dias.png">
@@ -54,14 +50,15 @@
   {
     "@context": "https://schema.org",
     "@type": "MusicRecording",
-    "@id": "https://eladiocarrion.com/buenos-dias#countdown",
+    "@id": "https://eladiocarrion.com/buenosdias#listen",
     "name": "Buenos Días",
-    "description": "Muy pronto: 'Buenos Días', el nuevo sencillo de Eladio Carrión.",
+    "description": "Escucha Buenos Días, el nuevo sencillo de Eladio Carrión.",
     "image": "https://eladiocarrion.com/img/cover-buenosdias.jpg",
-    "url": "https://eladiocarrion.com/buenos-dias",
+    "url": "https://eladiocarrion.com/buenosdias",
     "inLanguage": "es",
     "genre": ["Urbano Latino", "Trap Latino"],
-    "datePublished": "2026-02-05T20:00:00-05:00",
+    "datePublished": "2026-02-05",
+    "isAccessibleForFree": true,
     "byArtist": {
       "@type": "MusicArtist",
       "name": "Eladio Carrión",
@@ -71,6 +68,13 @@
         "https://www.tiktok.com/@eladiocarrioneldelah",
         "https://x.com/eladiocarry_on"
       ]
+    },
+    "potentialAction": {
+      "@type": "ListenAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://eladiocarrion.com/buenosdias"
+      }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -83,24 +87,97 @@
 
 <body>
 
-  <div class="page">
-    <div class="overlay"></div>
 
-    <div class="content">
-      <!-- Desktop -->
-      <div class="countdown-desktop" id="countdownDesktop">10H · 05M · 20S</div>
-      <div class="tagline">TODOS LOS DÍAS SON BUENOS DÍAS</div>
+<main class="container">
 
-      <!-- Mobile -->
-      <div class="countdown-mobile" id="countdownMobile">
-        <div class="label">TODOS LOS DÍAS<br>SON BUENOS DÍAS</div>
-        <div class="cdcel" id="mHours">00H</div>
-        <div class="cdcel" id="mMinutes">00M</div>
-        <div class="cdcel" id="mSeconds">00S</div>
-      </div>
-    </div>
 
-    <div class="footer">
+<header class="title">
+<h1>BUENOS DÍAS</h1>
+<h2>ELADIO CARRIÓN</h2>
+</header>
+
+
+<div class="cover">
+<img src="img/cover-buenos-dias.webp" alt="Buenos Días - Eladio Carrión">
+</div>
+
+
+<div class="platforms">
+
+<a href="https://music.apple.com/us/album/buenos-d%C3%ADas-single/1872144118" class="platform-btn" target="_blank">
+<span class="label">APPLE MUSIC</span>
+<span class="icon">
+<img src="img/apple.svg" alt="Apple Music">
+</span>
+</a>
+
+<a href="https://open.spotify.com/track/4mc8byHXW8rmZT5L5jwYG5?si=TAMl4mEKSveYRrkFd0uATw" class="platform-btn" target="_blank">
+<span class="label">SPOTIFY</span>
+<span class="icon">
+<img src="img/spotify.svg" alt="Spotify">
+</span>
+</a>
+
+
+<a href="https://www.amazon.com/gp/product/B0GJV271F3" class="platform-btn" target="_blank">
+<span class="label">AMAZON MUSIC</span>
+<span class="icon">
+<img src="img/amazon.svg" alt="Amazon Music">
+</span>
+</a>
+
+
+<a href="https://youtu.be/21puudq4H7g?si=pA1yvnuiJm7e7oMP" class="platform-btn" target="_blank">
+<span class="label">YOUTUBE</span>
+<span class="icon">
+<img src="img/youtube.svg" alt="YouTube">
+</span>
+</a>
+</div>
+
+<div class="platformscel">
+   
+<div class="platformscelfila">
+
+<a href="https://music.apple.com/us/album/buenos-d%C3%ADas-single/1872144118" class="platform-btn" target="_blank">
+<span class="label">APPLE MUSIC</span>
+<span class="icon">
+<img src="img/apple.svg" alt="Apple Music">
+</span>
+</a>
+
+<a href="https://open.spotify.com/track/4mc8byHXW8rmZT5L5jwYG5?si=TAMl4mEKSveYRrkFd0uATw" class="platform-btn" target="_blank">
+<span class="label">SPOTIFY</span>
+<span class="icon">
+<img src="img/spotify.svg" alt="Spotify">
+</span>
+</a>
+
+</div>
+
+<div class="platformscelfila">
+<a href="https://www.amazon.com/gp/product/B0GJV271F3" class="platform-btn" target="_blank">
+<span class="label">AMAZON MUSIC</span>
+<span class="icon">
+<img src="img/amazon.svg" alt="Amazon Music">
+</span>
+</a>
+
+
+<a href="https://youtu.be/21puudq4H7g?si=pA1yvnuiJm7e7oMP" class="platform-btn" target="_blank">
+<span class="label">YOUTUBE</span>
+<span class="icon">
+<img src="img/youtube.svg" alt="YouTube">
+</span>
+</a>
+</div>
+</div>
+
+
+</main>
+
+
+<footer class="socials">
   <a href="https://www.facebook.com/officialeladiocarrion" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
     <img src="img/facebook.svg" alt="Facebook">
   </a>
@@ -116,11 +193,8 @@
   <a href="https://www.youtube.com/channel/UC0_95MpNlRz9x7JmsXBClZA" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
     <img src="img/youtube.svg" alt="YouTube">
   </a>
-</div>
+</footer>
 
-  </div>
 
-  <!-- Scripts -->
-  <script src="JS/countdown.js?v=1"></script>
 </body>
 </html>
