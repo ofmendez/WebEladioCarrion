@@ -29,7 +29,7 @@
         <!-- ========== FAVICON Y ESTILOS ========== -->
         <link rel="icon" type="image/png" href="../Images/icono-donkbrn.png" />
         <!-- Mejor usar PNG por compatibilidad -->
-        <link rel="stylesheet" href="style01.css" />
+        <link rel="stylesheet" href="style02.css" />
 
         <!-- ========== PERFORMANCE Y TRANSICIONES ========== -->
         <meta name="view-transition" content="same-origin" />
@@ -134,19 +134,19 @@
         <!-- Contenedor del video -->
         <div class="video-container">
             <!-- Video para PC -->
-            <video id="video-pc" autoplay muted loop playsinline poster="assets/img/PosterHomeDesktop.webp">
-                <source src="assets/video/EDK_BackgroundVideo.mp4" type="video/mp4" />
+            <video id="video-pc" autoplay muted loop playsinline poster="assets/img/PosterEladioWeb.webp">
+                <source src="assets/video/WebsiteVideoSmall.mp4" type="video/mp4" />
             </video>
 
             <!-- Video para móvil -->
-            <video id="video-mobile" autoplay muted loop playsinline poster="assets/img/PosterHomeMobile.webp">
-                <source src="assets/video/EladioCarrionMobile.mp4" type="video/mp4" />
+            <video id="video-mobile" autoplay muted loop playsinline poster="assets/img/PosterEladioMobile.webp">
+                <source src="assets/video/MobileVideoSmall.mp4" type="video/mp4" />
             </video>
         </div>
 
         <script>
             const preloadVideo = document.createElement("video");
-            preloadVideo.src = "assets/video/Concerts.mp4";
+            preloadVideo.src = "assets/video/WebsiteVideoSmall.mp4";
             preloadVideo.preload = "auto";
             preloadVideo.load();
         </script>
