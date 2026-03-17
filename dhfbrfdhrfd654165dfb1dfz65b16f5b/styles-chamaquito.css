@@ -1,0 +1,262 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+-webkit-tap-highlight-color: transparent;
+}
+
+body{
+font-family:sans-serif;
+background:black;
+color:white;
+min-height:100vh;
+overflow-x:hidden;
+}
+
+
+/* VIDEO BACKGROUND */
+
+.video-bg{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+.video-bg video{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* desktop default */
+.video-mobile{
+display:none;
+}
+
+
+/* MAIN LAYOUT */
+
+.container{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+min-height:100vh;
+padding:50px 20px 20px;
+text-align:center;
+gap:40px;
+}
+
+
+/* SIGNATURE */
+
+.signature img{
+max-width:1000px;
+width:80%;
+mix-blend-mode:screen;
+}
+
+
+/* COVER */
+
+.cover img{
+width:clamp(220px,28vw,360px);
+box-shadow:0 20px 60px rgba(0,0,0,.7);
+border-radius: 5px;
+}
+
+
+/* PLATFORMS */
+
+.platforms{
+display:flex;
+gap:18px;
+flex-wrap:wrap;
+justify-content:center;
+max-width:90vw;
+}
+
+.btn img{
+height:52px;
+transition:transform .2s ease;
+}
+
+.btn:hover img{
+transform:translateY(-4px);
+}
+
+
+/* SOCIAL */
+
+.social{
+display:flex;
+gap:24px;
+}
+
+.social img{
+width:22px;
+opacity:.9;
+transition:.2s;
+}
+
+.social img:hover{
+opacity:1;
+transform:translateY(-3px);
+}
+
+
+
+/* MOBILE */
+
+.mobile{
+display:none;
+}
+
+@media (max-width:768px){
+
+.video-desktop{
+display:none;
+}
+
+.video-mobile{
+display:block;
+}
+
+.container{
+gap:32px;
+}
+
+.platforms{
+width: 90vw;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:16px;
+}
+
+.signature img{
+max-width:1000px;
+width:90vw;
+mix-blend-mode:screen;
+}
+
+.desktop{
+display:none;
+}
+
+.mobile{
+display:block;
+}
+
+.btn img{
+height:auto;
+width: 100%;
+}
+
+}
+
+/* VINYL ROW */
+
+.vinyl-row{
+display:grid;
+grid-template-columns:minmax(220px, 320px) minmax(180px, 320px);
+align-items:center;
+justify-content:center;
+gap:28px;
+width:100%;
+max-width:760px;
+margin-top:-8px;
+}
+
+.vinyl-card{
+position:relative;
+display:block;
+width:100%;
+aspect-ratio:1 / 0.8;
+text-decoration:none;
+overflow:hidden;
+border-radius:8px;
+}
+
+.vinyl-img{
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:contain;
+transition:opacity .35s ease, transform .35s ease;
+}
+
+.vinyl-img--default{
+opacity:1;
+z-index:1;
+}
+
+.vinyl-img--hover{
+opacity:0;
+z-index:2;
+}
+
+.vinyl-card:hover .vinyl-img--default{
+opacity:0;
+transform:scale(1.02);
+}
+
+.vinyl-card:hover .vinyl-img--hover{
+opacity:1;
+transform:scale(1.02);
+}
+
+.vinyl-cta{
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+}
+
+.vinyl-cta img{
+display:block;
+width:100%;
+max-width:260px;
+height:auto;
+transition:transform .2s ease;
+}
+
+.vinyl-cta:hover img{
+transform:translateY(-4px);
+}
+
+@media (max-width:768px){
+
+.vinyl-row{
+grid-template-columns:1fr;
+gap:18px;
+max-width:320px;
+}
+
+.vinyl-cta img{
+max-width:240px;
+margin:0 auto;
+}
+
+}
+
+
+.vinyl-title{
+
+font-family:"Montserrat", sans-serif;
+font-weight:300;
+font-size:clamp(16px,1.4vw,22px);
+letter-spacing:.18em;
+
+text-align:center;
+
+margin-top:10px;
+margin-bottom:-10px;
+
+}
