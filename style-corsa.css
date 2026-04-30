@@ -58,11 +58,15 @@ video {
   }
 }
 
-/* Tarjeta menú */
-.menu-card {
-  position: fixed;
+.content-general{
+position: fixed;
   top: 50%;
   left: 50%;
+}
+
+/* Tarjeta menú */
+.menu-card {
+  
   width: 25svw;
   min-width: 380px;
   height: 15.166svw;
@@ -91,9 +95,31 @@ video {
   color:#222;
 }
 
+.CholiTickets{
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.CholiTickets a{
+  text-decoration: none;
+  color: #222;
+  font-size: max(32px, 2.2vw);
+
+  background: url('img/ruido.png');
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.CholiTickets a:hover{
+  text-decoration: underline;
+}
+
 .enlacecorsa{
   text-decoration: none;
   color: #222;
+  background: url('img/ruido.png');
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .enlacecorsa:hover{
@@ -102,29 +128,22 @@ video {
 
 .socialnetworkscontainer-corsa{
   display: flex;
-  position: absolute;
-  width:8svw;
-  bottom:14px;
-  left: 14px;
-  z-index: 9;
   gap: 10px;
-  min-width: 140px;
+  z-index: 20;
+  transform: translateX(-50%);
+  position: relative;
+  bottom: max(130px, 8.5vw);
+  width:100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .socialnetwork-corsa{
-  width:100px;
-  opacity: 0.7;
+  width:max(36px, 2.4vw);
+  opacity: 0.8;
+  display: block;
 }
 
 .socialnetwork-corsa:hover{
   opacity: 1;
-}
-
-@media (max-width: 768px) {
-  .socialnetworkscontainer-corsa{
-    left:50%;
-    bottom:15px;
-    transform: translateX(-50%);
-    min-width: 170px;
-  }
 }
