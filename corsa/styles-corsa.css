@@ -39,6 +39,16 @@ object-fit:cover;
 display:none;
 }
 
+.OverlayVideo{
+    background-color: #000;
+    width:100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left:0;
+    opacity: 0.5;
+
+}
 
 /* MAIN LAYOUT */
 
@@ -51,6 +61,7 @@ min-height:100svh;
 padding:20px 20px 20px;
 text-align:center;
 gap:30px;
+z-index: 2;
 }
 
 
@@ -69,6 +80,8 @@ padding-top:5svh;
 width:clamp(180px,25vw,380px);
 box-shadow:0 20px 60px rgba(0,0,0,.7);
 border-radius: 5px;
+position: relative;
+z-index:2;
 }
 
 
@@ -81,6 +94,8 @@ flex-wrap:wrap;
 justify-content:center;
 max-width:90vw;
 padding-bottom: 5vh;
+z-index: 2;
+position: relative;
 }
 
 .btn img{
